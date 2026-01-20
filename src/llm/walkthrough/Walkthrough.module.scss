@@ -1,0 +1,405 @@
+
+.tableWrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 16px 0;
+}
+
+
+.table {
+    border-collapse: collapse;
+}
+
+.table :global(th) {
+    text-align: center;
+    padding: 4px 8px;
+    color: #777;
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+.table :global(thead) {
+    border-bottom: 1px solid #999;
+}
+
+.table :global(td) {
+    padding: 2px 8px;
+    text-align: center;
+}
+
+.table tr th {
+    border-right: 1px solid #999;
+}
+
+.table tr:first-child th, .table tr:first-child td {
+    border-bottom: 1px solid #999;
+}
+
+.tokString td {
+    color: #3a3;
+}
+
+.tokIndex {
+    color: #333;
+}
+
+.cellInfoCols {
+    display: flex;
+}
+
+.cellInfoCol {
+    min-width: 160px;
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8px;
+}
+
+.cellInfoText {
+    margin-left: 8px;
+}
+
+.cellArrayHoriz {
+    display: flex;
+}
+
+.cellRect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+
+.cellCircle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.graph {
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    margin: 8px 0;
+    z-index: 0;
+}
+
+.graphCol {
+    position: relative;
+    height: 100%;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.graphBar {
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    background-color: #f00;
+}
+
+.graphBarLabel {
+    position: absolute;
+    font-size: 11px;
+}
+
+.graphBarHit {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 16px;
+    cursor: ns-resize;
+    pointer-events: auto;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.axisZero {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto 0;
+    height: 1px;
+    background-color: #999;
+    z-index: -1;
+}
+
+.externalLink {
+    color: rgb(89, 89, 211);
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// Training walkthrough styles
+.trainingBox {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-radius: 8px;
+}
+
+.trainingDiagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.trainingStep {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stepIcon {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+
+.stepLabel {
+    font-size: 0.85rem;
+    text-align: center;
+    color: #333;
+}
+
+.trainingArrow {
+    font-size: 1.5rem;
+    color: #3b82f6;
+}
+
+.stepsBox {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    border-left: 4px solid #3b82f6;
+}
+
+.trainingStepsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        margin-bottom: 1rem;
+        padding-left: 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        strong {
+            color: #1e40af;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        p {
+            margin: 0;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+.lossBox {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.lossExample {
+    padding: 1rem;
+    background: #ecfdf5;
+    border-radius: 8px;
+    border-left: 4px solid #22c55e;
+
+    &.lossBad {
+        background: #fef2f2;
+        border-left-color: #ef4444;
+    }
+}
+
+.lossRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 0;
+
+    &.lossResult {
+        border-top: 1px dashed #ccc;
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+        font-weight: 600;
+    }
+}
+
+.lossLabel {
+    color: #666;
+}
+
+.lossValue {
+    font-family: monospace;
+    color: #333;
+}
+
+.backpropBox {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #faf5ff;
+    border-radius: 8px;
+}
+
+.backpropDiagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.backpropLayer {
+    padding: 0.5rem 1.5rem;
+    background: #a855f7;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.backpropArrowDown {
+    color: #7c3aed;
+    font-size: 1rem;
+}
+
+.backpropExplain {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-style: italic;
+}
+
+.gradientBox {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f0fdf4;
+    border-radius: 8px;
+}
+
+.gradientVisual {
+    margin-bottom: 0.75rem;
+}
+
+.gradientPath {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.gradientPoint {
+    padding: 0.5rem 1rem;
+    background: #d1d5db;
+    border-radius: 20px;
+    font-size: 0.85rem;
+
+    &.start {
+        background: #fecaca;
+    }
+
+    &.optimal {
+        background: #86efac;
+    }
+}
+
+.gradientStep {
+    color: #22c55e;
+    font-size: 1.2rem;
+}
+
+.gradientCaption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-style: italic;
+}
+
+.statsBox {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f1f5f9;
+    border-radius: 8px;
+}
+
+.statRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e2e8f0;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.statLabel {
+    color: #64748b;
+}
+
+.statValue {
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.summaryBox {
+    margin: 1rem 0;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-radius: 8px;
+}
+
+.summaryCircle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.summaryItem {
+    padding: 0.5rem 1.25rem;
+    background: white;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.summaryArrow {
+    color: #d97706;
+    font-size: 1.2rem;
+}
+
+.summaryNote {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #92400e;
+    font-style: italic;
+}

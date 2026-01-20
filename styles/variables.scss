@@ -1,0 +1,33 @@
+
+// Media queries
+$phone-width: 'screen and (max-width: 800px)';
+$tablet-width: 'screen and (max-width: 1024px)';
+
+// Neural Insight Palette - Legacy SCSS variables
+$color-light-grey: #cbd5e1;
+$color-highlight: #6366f1;
+$color-highlight-dark: #4f46e5;
+
+$color-text-light: #64748b;
+$color-text-dark: #f8fafc;
+
+$color-red: #ef4444;
+$color-success: #4ade80;
+
+// Accent colors
+$accent-primary: #818cf8;
+$accent-secondary: #a78bfa;
+$accent-tertiary: #22d3ee;
+
+// Visualization colors
+$color-embedding: #c084fc;
+$color-attention: #fb923c;
+$color-mlp: #22d3d8;
+$color-softmax: #4ade80;
+$color-layernorm: #fbbf24;
+$color-output: #f472b6;
+
+// Backgrounds
+$bg-dark-primary: #0f172a;
+$bg-dark-secondary: #1e293b;
+$bg-dark-tertiary: #334155;

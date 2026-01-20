@@ -1,0 +1,158 @@
+/* Theme Variables - Neural Insight Palette */
+:root,
+[data-theme="light"] {
+    /* Backgrounds */
+    --bg-primary: #f8fafc;
+    --bg-secondary: #e2e8f0;
+    --bg-tertiary: #cbd5e1;
+    --bg-panel: #ffffff;
+    --bg-hover: #f1f5f9;
+
+    /* Text */
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-tertiary: #64748b;
+
+    /* Accents - Neural Insight */
+    --accent-primary: #6366f1;
+    --accent-secondary: #8b5cf6;
+    --accent-tertiary: #06b6d4;
+    --accent-color: #6366f1;
+    --accent-hover: #4f46e5;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    --gradient-accent: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
+
+    /* Visualization Colors - Model Components */
+    --color-embedding: #c084fc;
+    --color-attention: #fb923c;
+    --color-mlp: #22d3d8;
+    --color-softmax: #4ade80;
+    --color-layernorm: #fbbf24;
+    --color-output: #f472b6;
+
+    /* Borders */
+    --border-color: #e2e8f0;
+    --border-accent: rgba(99, 102, 241, 0.3);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.15);
+
+    /* Canvas background */
+    --canvas-bg: #f1f5f9;
+}
+
+[data-theme="dark"] {
+    /* Backgrounds - Slate tones */
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --bg-panel: #1e293b;
+    --bg-hover: #334155;
+
+    /* Text */
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-tertiary: #64748b;
+
+    /* Accents - Neural Insight */
+    --accent-primary: #818cf8;
+    --accent-secondary: #a78bfa;
+    --accent-tertiary: #22d3ee;
+    --accent-color: #818cf8;
+    --accent-hover: #6366f1;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
+    --gradient-accent: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+
+    /* Visualization Colors - Model Components */
+    --color-embedding: #c084fc;
+    --color-attention: #fb923c;
+    --color-mlp: #22d3d8;
+    --color-softmax: #4ade80;
+    --color-layernorm: #fbbf24;
+    --color-output: #f472b6;
+
+    /* Borders */
+    --border-color: #334155;
+    --border-accent: rgba(129, 140, 248, 0.3);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 30px rgba(129, 140, 248, 0.2);
+
+    /* Canvas background */
+    --canvas-bg: #0f172a;
+}
+
+/* Apply theme to body */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-tertiary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-tertiary);
+}
+
+/* Selection with accent color */
+::selection {
+    background: var(--accent-primary);
+    color: white;
+}
+
+/* Focus outline */
+:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Utility classes for Neural Insight palette */
+.gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.glow-effect {
+    box-shadow: var(--shadow-glow);
+}
+
+.accent-border {
+    border: 1px solid var(--border-accent);
+}

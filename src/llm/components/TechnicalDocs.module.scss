@@ -1,0 +1,212 @@
+.openButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
+    }
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.panel {
+    background: var(--bg-panel, #1e293b);
+    color: var(--text-primary, white);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 700px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 24px;
+    position: relative;
+
+    h2 {
+        margin: 0 0 8px 0;
+    }
+}
+
+.closeBtn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: var(--text-secondary, #94a3b8);
+    cursor: pointer;
+    font-size: 1.25rem;
+
+    &:hover {
+        color: var(--text-primary, white);
+    }
+}
+
+.subtitle {
+    color: var(--text-secondary, #94a3b8);
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color, #334155);
+}
+
+.tab {
+    padding: 8px 12px;
+    background: var(--bg-secondary, #334155);
+    border: none;
+    border-radius: 6px;
+    color: var(--text-secondary, #94a3b8);
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        background: var(--bg-hover, #475569);
+        color: var(--text-primary, white);
+    }
+
+    &.active {
+        background: #22c55e;
+        color: white;
+    }
+}
+
+.content {
+    min-height: 200px;
+}
+
+.equation {
+    background: var(--bg-secondary, #334155);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 16px 0;
+    text-align: center;
+    font-size: 1.125rem;
+
+    code {
+        font-family: 'Times New Roman', serif;
+        font-size: 1.25rem;
+    }
+
+    sup, sub {
+        font-size: 0.7em;
+    }
+}
+
+.variables {
+    background: var(--bg-tertiary, #475569);
+    padding: 16px;
+    border-radius: 8px;
+    margin: 12px 0;
+    font-size: 0.875rem;
+
+    div {
+        margin: 8px 0;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    strong {
+        color: var(--accent-color, #60a5fa);
+        font-family: monospace;
+    }
+
+    sub {
+        font-size: 0.7em;
+    }
+}
+
+.note {
+    padding: 12px 16px;
+    background: rgba(34, 197, 94, 0.1);
+    border-left: 3px solid #22c55e;
+    border-radius: 0 8px 8px 0;
+    margin: 12px 0;
+    font-size: 0.875rem;
+    color: var(--text-secondary, #94a3b8);
+
+    strong {
+        color: var(--text-primary, white);
+    }
+}
+
+.code {
+    background: #0d1117;
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: #c9d1d9;
+    margin: 0;
+    white-space: pre;
+}
+
+.papers {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.paper {
+    display: block;
+    padding: 16px;
+    background: var(--bg-secondary, #334155);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+
+    &:hover {
+        background: var(--bg-hover, #475569);
+        transform: translateX(4px);
+    }
+}
+
+.paperTitle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent-color, #60a5fa);
+    font-weight: 600;
+    margin-bottom: 4px;
+
+    svg {
+        font-size: 0.75rem;
+        opacity: 0.7;
+    }
+}
+
+.paperInfo {
+    font-size: 0.75rem;
+    color: var(--text-secondary, #94a3b8);
+}

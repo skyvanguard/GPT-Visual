@@ -1,0 +1,116 @@
+.container {
+    position: relative;
+}
+
+.shareButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-secondary, #334155);
+    color: var(--text-primary, white);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: background 0.2s, transform 0.2s;
+
+    &:hover {
+        background: var(--bg-hover, #475569);
+        transform: scale(1.1);
+    }
+}
+
+.backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    background: var(--bg-panel, #1e293b);
+    border-radius: 12px;
+    padding: 16px;
+    min-width: 200px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    animation: dropIn 0.2s ease-out;
+}
+
+@keyframes dropIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary, #94a3b8);
+    margin-bottom: 12px;
+}
+
+.socialButtons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.socialButton {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--bg-secondary, #334155);
+    color: var(--text-primary, white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+
+    &:hover {
+        background: var(--btn-color);
+        transform: scale(1.1);
+    }
+}
+
+.divider {
+    height: 1px;
+    background: var(--border-color, #334155);
+    margin: 16px 0;
+}
+
+.copyButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px;
+    background: var(--bg-secondary, #334155);
+    border: none;
+    border-radius: 8px;
+    color: var(--text-primary, white);
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: background 0.2s;
+
+    &:hover {
+        background: var(--bg-hover, #475569);
+    }
+
+    svg {
+        color: var(--accent-color, #60a5fa);
+    }
+}
