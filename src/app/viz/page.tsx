@@ -1,9 +1,11 @@
 import React from 'react';
-import { LayerView } from '@/src/llm/LayerView';
-import { InfoButton } from '@/src/llm/WelcomePopup';
+import dynamic from 'next/dynamic';
 import { Header } from '@/src/homepage/Header';
-import { Glossary } from '@/src/llm/components/Glossary';
-import { ExampleSelector } from '@/src/llm/components/ExampleSelector';
+
+const LayerView = dynamic(() => import('@/src/llm/LayerView').then(m => m.LayerView), { ssr: false });
+const InfoButton = dynamic(() => import('@/src/llm/WelcomePopup').then(m => m.InfoButton), { ssr: false });
+const Glossary = dynamic(() => import('@/src/llm/components/Glossary').then(m => m.Glossary), { ssr: false });
+const ExampleSelector = dynamic(() => import('@/src/llm/components/ExampleSelector').then(m => m.ExampleSelector), { ssr: false });
 
 export const metadata = {
     title: 'GPT-Visual - Visualizacion 3D Interactiva',
