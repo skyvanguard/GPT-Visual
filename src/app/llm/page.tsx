@@ -1,11 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import { Header } from '@/src/homepage/Header';
 
-const LayerView = dynamic(() => import('@/src/llm/LayerView').then(m => m.LayerView), { ssr: false });
-const InfoButton = dynamic(() => import('@/src/llm/WelcomePopup').then(m => m.InfoButton), { ssr: false });
-const Glossary = dynamic(() => import('@/src/llm/components/Glossary').then(m => m.Glossary), { ssr: false });
-const ExampleSelector = dynamic(() => import('@/src/llm/components/ExampleSelector').then(m => m.ExampleSelector), { ssr: false });
+const LlmClientContent = dynamic(() => import('./LlmClientContent'), { ssr: false });
 
 export const metadata = {
     title: 'GPT-Visual - Visualización 3D de Modelos GPT',
@@ -34,13 +30,5 @@ export const metadata = {
 };
 
 export default function Page() {
-    return <>
-        <Header title="GPT-Visual">
-            <InfoButton />
-        </Header>
-        <LayerView />
-        <Glossary />
-        <ExampleSelector />
-        <div id="portal-container"></div>
-    </>;
+    return <LlmClientContent />;
 }
